@@ -1,0 +1,487 @@
+
+
+/* ================= ANIMATED BACKGROUND ================= */
+
+body {
+    background: #000;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Background container */
+.animated-bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+
+/* Floating circles */
+.animated-bg span {
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(59,130,246,0.4) 0%, transparent 70%);
+    animation: float 20s linear infinite;
+}
+
+/* Different sizes & positions */
+.animated-bg span:nth-child(1) {
+    width: 500px;
+    height: 500px;
+    top: -150px;
+    left: -150px;
+}
+
+.animated-bg span:nth-child(2) {
+    width: 400px;
+    height: 400px;
+    bottom: -120px;
+    right: -100px;
+    animation-duration: 25s;
+}
+
+.animated-bg span:nth-child(3) {
+    width: 300px;
+    height: 300px;
+    top: 40%;
+    left: 60%;
+    animation-duration: 30s;
+}
+
+/* Animation */
+@keyframes float {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-60px) rotate(180deg);
+    }
+    100% {
+        transform: translateY(0px) rotate(360deg);
+    }
+}
+
+/* ================= GLOBAL ================= */
+body{
+    background:#000;
+    color:#fff;
+    font-family:'Poppins', sans-serif;
+    margin:0;
+    padding:0;
+}
+
+/* Headings */
+h1{
+    font-size:52px;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+h2{
+    font-size:34px;
+    font-weight:600;
+    margin-bottom:25px;
+}
+
+h3{
+    font-size:22px;
+    font-weight:600;
+}
+
+.section{
+    padding:80px 10%;
+}
+
+/* Blue Accent */
+.gold{
+    color:#3B82F6;
+}
+
+.center{
+    text-align:center;
+}
+
+/* ================= HERO ================= */
+.hero{
+    padding:100px 10%;
+}
+
+.hero-container-left{
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    gap:60px;
+    text-align:left;
+}
+
+.profile-img{
+    width:300px;
+    border-radius:20px;
+    border:3px solid #3B82F6;
+    box-shadow:0 0 25px rgba(59,130,246,0.4);
+}
+.profile-img {
+    width: 300px;          /* same width & height */
+    height: 300px;
+    border-radius: 50%;    /* makes it circle */
+    object-fit: cover;     /* prevents stretching */
+    object-position: center;
+    border: 4px solid #2563eb;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+.hero-text-content{
+    max-width:600px;
+}
+
+.hero-text{
+    font-size:18px;
+    line-height:1.8;
+    color:#cbd5e1;
+    margin-top:15px;
+}
+
+/* ================= BUTTONS ================= */
+.gold-btn{
+    background:#2563EB;
+    color:#fff;
+    padding:12px 28px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:500;
+    display:inline-block;
+    transition:0.3s ease;
+}
+
+.gold-btn:hover{
+    background:#1E40AF;
+    transform:translateY(-3px);
+}
+
+.gold-outline{
+    border:2px solid #3B82F6;
+    padding:10px 25px;
+    color:#3B82F6;
+    text-decoration:none;
+    border-radius:8px;
+    transition:0.3s ease;
+}
+
+.gold-outline:hover{
+    background:#3B82F6;
+    color:#000;
+}
+
+/* ================= ABOUT ================= */
+.about-container{
+    max-width:850px;
+    margin:auto;
+    text-align:left;
+}
+
+.about-container p{
+    font-size:17px;
+    line-height:1.8;
+    color:#cbd5e1;
+}
+
+.about-buttons{
+    margin-top:30px;
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+
+.project-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+.project-card{
+    background:#111;
+    padding:25px;
+    border-radius:12px;
+    border:1px solid #1f2937;
+    transition:0.3s ease;
+}
+
+.project-card:hover{
+    transform:translateY(-8px);
+    border:1px solid #3B82F6;
+}
+
+.project-card img{
+    width:100%;
+    border-radius:8px;
+    margin-bottom:15px;
+}
+
+.gold-btn-sm{
+    background:#2563EB;
+    color:white;
+    padding:8px 16px;
+    text-decoration:none;
+    border-radius:6px;
+    font-size:14px;
+}
+
+/* ================= SKILLS (DARK GRID STYLE) ================= */
+.skills-dark{
+    padding:100px 10%;
+    background:#0F172A;
+    color:#E2E8F0;
+}
+
+.skills-heading{
+    font-size:36px;
+    margin-bottom:60px;
+    color:#3B82F6;
+    letter-spacing:2px;
+}
+
+.skills-tech-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.tech-card{
+    background:#111827;
+    padding:30px;
+    border-radius:15px;
+    border:1px solid #1E40AF;
+    transition:0.4s ease;
+    text-align:left;
+}
+
+.tech-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 25px rgba(59,130,246,0.4);
+    border:1px solid #3B82F6;
+}
+
+.tech-card h3{
+    color:#3B82F6;
+    margin-bottom:15px;
+}
+
+.tech-card ul{
+    list-style:none;
+    padding:0;
+}
+
+.tech-card ul li{
+    margin-bottom:8px;
+    position:relative;
+    padding-left:15px;
+}
+
+.tech-card ul li::before{
+    content:"▹";
+    position:absolute;
+    left:0;
+    color:#3B82F6;
+}
+
+
+/* ================= SKILLS (DARK GRID STYLE) ================= */
+.skills-dark{
+    padding:100px 10%;
+    background:#0F172A;
+    color:#E2E8F0;
+}
+
+.skills-heading{
+    font-size:36px;
+    margin-bottom:60px;
+    color:#3B82F6;
+    letter-spacing:2px;
+}
+
+.skills-tech-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.tech-card{
+    background:#111827;
+    padding:30px;
+    border-radius:15px;
+    border:1px solid #1E40AF;
+    transition:0.4s ease;
+    text-align:left;
+}
+
+.tech-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 25px rgba(59,130,246,0.4);
+    border:1px solid #3B82F6;
+}
+
+.tech-card h3{
+    color:#3B82F6;
+    margin-bottom:15px;
+}
+
+.tech-card ul{
+    list-style:none;
+    padding:0;
+}
+
+.tech-card ul li{
+    margin-bottom:8px;
+    position:relative;
+    padding-left:15px;
+}
+
+.tech-card ul li::before{
+    content:"▹";
+    position:absolute;
+    left:0;
+    color:#3B82F6;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:768px){
+
+    .hero-container-left{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .profile-img{
+        width:220px;
+    }
+
+    .about-container{
+        text-align:center;
+    }
+
+    .about-buttons{
+        justify-content:center;
+    }
+}
+
+
+/* ================= NAVBAR MODERN BLUE ================= */
+
+.custom-navbar {
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(12px);
+    padding: 18px 10%;
+    border-bottom: 1px solid #1E40AF;
+}
+
+/* Brand */
+.brand-logo {
+    font-size: 26px;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+}
+
+.brand-logo span {
+    color: #3B82F6;
+}
+
+/* Links */
+.custom-link {
+    color: #cbd5e1;
+    margin-left: 25px;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s;
+}
+
+.custom-link:hover {
+    color: #3B82F6;
+}
+
+/* Underline animation */
+.custom-link::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: #3B82F6;
+    transition: 0.3s;
+}
+
+.custom-link:hover::after {
+    width: 100%;
+}
+
+/* Login button */
+.login-btn {
+    color: #3B82F6;
+    margin-left: 25px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* Signup button */
+.signup-btn {
+    margin-left: 20px;
+    background: linear-gradient(135deg, #2563EB, #3B82F6);
+    padding: 8px 18px;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.signup-btn:hover {
+    box-shadow: 0 0 15px rgba(59,130,246,0.6);
+    transform: translateY(-2px);
+}
+
+/* Logout button */
+.logout-btn {
+    margin-left: 20px;
+    background: transparent;
+    border: 1px solid #3B82F6;
+    padding: 6px 15px;
+    border-radius: 8px;
+    color: #3B82F6;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.logout-btn:hover {
+    background: #3B82F6;
+    color: black;
+}
+
+
+/* FORCE DARK INPUT THEME */
+
+input.form-control,
+textarea.form-control {
+    background-color: #111827 !important;
+    color: #ffffff !important;
+    border: 1px solid #3B82F6 !important;
+}
+
+input.form-control::placeholder,
+textarea.form-control::placeholder {
+    color: #cbd5e1 !important;
+    opacity: 1;
+}
+
+input.form-control:focus,
+textarea.form-control:focus {
+    background-color: #111827 !important;
+    color: #ffffff !important;
+    border-color: #60A5FA !important;
+    box-shadow: 0 0 8px rgba(59,130,246,0.6) !important;
+}
